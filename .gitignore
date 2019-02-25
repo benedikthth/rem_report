@@ -69,6 +69,11 @@ Backup[ ]of[ ]*.numbers/
 *.synctex.gz
 *.pdf
 
+#????
+*.bcf
+#?!?!??!
+*.run.xml
+
 # Mac IDE files
 *.swp
 *~
