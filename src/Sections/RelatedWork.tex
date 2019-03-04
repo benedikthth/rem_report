@@ -1,2 +1,41 @@
 \section{Related Work}
 \label{sec:relatedWork}
+
+
+There has not been a whole lot of work 
+put into attack pattern analysis of honeypot
+servers.
+
+
+An 2004 analysis by F. Rainal et al. \cite{1324605}
+on network traffic, found that from the first 
+seconds of being connected to the internet, the 
+honeypot is subject to scans. The amount of time 
+ago the experiment was conducted makes it difficult
+to compare to, since in the 15 years passed since the
+publication, the landscape of the internet has changed 
+considerably. 
+The authors  make no attempt to discern a pattern
+in the scans, or attacks made on the server. They also
+point out that a sufficiently skilled intruder, may 
+realize that he is in a honeypot, and exit so that 
+his intentions are not revealed.
+
+
+
+The use of honeypots has led to anti-honeypot technology.
+Krawetz \cite{1264861} 
+notes in his 2004 article that spammers are re-active,
+not proactive, changing their tools only when they 
+become ineffective. The same can be claimed with honeypot
+technology, as when a detection strategy is discovered
+it will be made ineffective. The two sides will be forever
+caught in a evolutionary arms race.
+
+
+
+To understand where the traffic to the server originates from
+it is important to acknowledge the existence of large-scale 
+botnets\cite{AbuRajab:2006:MAU:1177080.1177086}, automatic
+probes, and current scanning technology \cite{6657498}.
+

@@ -1,10 +1,9 @@
 
 \begin{abstract}
-    In this paper, I will present the results from
-    recording and comparing the attack patterns 
-    experienced by honeypot servers in different 
-    geographical regions. 
-
+    In this paper I will present the results 
+    from analysis of data gathered from over
+    560,000 attacks on a honeypot server.
+    
 \keywords{Security  \and Honeypot.}
 % ToDo: find more keywords
 
@@ -24,12 +23,12 @@
     A 2017 study \cite{Britton_Liu}
     used HoneyPot servers to record malicious
     incoming traffic. Over a 24 hour period they 
-    experienced 300,103 attempted attacks, or 
-    about 3.4 attacks per second on average.
-    These attacks were recorded on devices that
-    had no associated domain name, and was in no
-    way transmitting any data into the internet
-    before being probed.
+    claim to have experienced 300,103 attempted
+    attacks, or about 3.4 attacks per second 
+    on average. These attacks were recorded on 
+    devices that had no associated domain name, 
+    and were in no way transmitting any data 
+    into the internet before being probed.
 
     
     Currently, there is a rising trend of introducing
@@ -41,16 +40,38 @@
 
     
     Most of these IoT devices are similar to the honeypots
-    described by Britton et al\cite{Britton_Liu}, in that 
+    described by Britton et al.\cite{Britton_Liu}, in that 
     they are usually small devices, not associated with 
     a hostname, and due to the specialized nature, their 
     communication with the wider internet is limited.
 
 
-    The overproliferation of these IoT devices has given 
+    Due to manufacturer negligence, end-user apathy or 
+    a combination of the two, a vast portion of IoT devices
+    are left vulnerable.
+
+    The over-proliferation of these IoT devices has given 
     massive fodder to Botnets such as Mirai, which in 2016
     launched a 620 Gbps attack on KrebsOnSecurity.com
     \cite{Brian_Krebs_2016}.
 
+
+    To combat the attempts of automated infectious devices
+    and novice would-be attackers, many measures have been
+    generated, such as Intrusion-Detection-Systems(IDS)
+    \cite{4693640} and, Intrusion-Prevention-Systems(IPS) like 
+    firewalls. A system that sits somewhere in between the
+    two, are HoneyPot servers. Devices designed to pose as
+    vulnerable hosts and fool would-be attackers. 
+    HoneyPots can be designed to respond to 
+    different attacks, such as dictionary attacks on SSH servers,
+    Telnet, or even wordpress plugin vulnerabilities.
+
     
-    If
+    Observing a pattern of attack rate over the day can lead
+    to a number of interesting hypotheses, but I will leave any
+    conjecture until after the data has been collected and 
+    adequately analyzed.
+
+    
+    
