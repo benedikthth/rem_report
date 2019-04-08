@@ -2,37 +2,43 @@
   \label{sec:methods}
   
 
-  To gather the data I need, I will use the Modern Honey 
-  Network\textit{(MHN)} to manage 
+  To gather the data for this report, I will use the Modern 
+  Honey Network \abbrv{MHN} to manage 
   and deploy the HoneyPot server. MHN will collect data about
   the attacks as they take place, and store it in a database.
 
+
   For hosting, I choose DigitalOcean, for the ability to
   cheaply run my server in a foreign country.
-  The attack patterns can 
+  
 
-
-  For this study, I will be focusing on SSH brute force attacks.
+  
+  
+  In this study, I focused on SSH brute force attacks.
   To collect data I will use the Cowrie\cite{Cowrie}
   honeypot. An medium interaction SSH and Telnet honeypot
   designed to log brute force attacks and the shell 
   interaction performed by the attacker. A sample session 
   log can be seen in listing \ref{lst:data}
 
-  
+  \input{src/Listings/sample_datapoint.tex}
+
+  While MHN has a rest API, it is not very useful,
+  instead the data had to be manually fetched from
+  the MHN server's database.
+
   This data includes a timestamp, IP-address,
   target-protocol,
   the credentials that were used to log into the 
   server, and even the commands that were run when
   the attacker thought he had gained access.
-
+  
   
   By using publicly available databases like
   MaxMind's GeoIP2 City and Country CSV Databases
   \cite{maxminds}, the IP addresses can be translated
   into countries of origins.
-  This enables us to break down the attacks by country 
-  % (see figure \ref{fig:country_breakdown})
+  
 
   It is important to note, that while each attack is 
   timestamped, the timestamp is in the timezone of the 
@@ -40,13 +46,16 @@
   analyse the rate of launched attacks over day, the
   geo-location can also be used to adjust the timestamp
   to represent the time of which the attack was launched.
+  It bears acknowledging that there are methods available
+  to fool geolocation, such as using VPN, TOR, and for
+  operations of large enough scale, IP address space hijacking.
+  
 
   
-  The manipulation of the in all ways as described above
+  The handling of data in the ways as described above
   can be achieved by using python, and the existing Pandas
   \cite{pandas} library, which makes the handling and
   aggregation of data easy, and also allows for plotting
   the data.
-
-
-  \input{src/Listings/sample_datapoint.tex}
+  
+  

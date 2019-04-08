@@ -2,9 +2,10 @@
 \begin{abstract}
     In this paper I will present the results 
     from analysis of data gathered from over
-    560,000 attacks on a honeypot server.
+    812.013 attacks on a honeypot server.
     
-\keywords{Security  \and Honeypot.}
+
+% \keywords{Security  \and Honeypot.}
 % ToDo: find more keywords
 
 \end{abstract}
@@ -17,7 +18,19 @@
     If you have a device connected to the
     internet, it is almost certain that some person,
     or an infected machine has probed it, and possibly
-    attempted to break into your device. 
+    attempted to break into your system. 
+
+
+    To combat the attempts of automated infectious devices
+    and novice would-be attackers, a number of techniques 
+    have been developed, such as Intrusion-Detection-Systems \abbrv{IDS}
+    \cite{4693640} and, Intrusion-Prevention-Systems \abbrv{IPS} like 
+    firewalls. HoneyPot servers sit somewhere in between the
+    two. HoneyPots are devices designed to pose as
+    vulnerable hosts and fool would-be attackers. 
+    HoneyPots can be designed to respond to 
+    different attacks, such as dictionary attacks on SSH servers,
+    Telnet, or even WordPress plugin vulnerabilities.
 
 
     A 2017 study \cite{Britton_Liu}
@@ -32,9 +45,9 @@
 
     
     Currently, there is a rising trend of introducing
-    the internet-of-things \textit{(IoT)} devices to 
+    the internet-of-things \abbrv{IoT} devices to 
     home, and industrial environments. The number of 
-    IoT devices is currently estimated to be 26.66 
+    IoT devices in 2019 is estimated to be 26.66 
     billion, and by 2025, the count is projected to 
     reach 75.44 billion. \cite{statista}
 
@@ -46,32 +59,35 @@
     communication with the wider internet is limited.
 
 
-    Due to manufacturer negligence, end-user apathy or 
+    Due to manufacturer negligence, end-user ignorance or 
     a combination of the two, a vast portion of IoT devices
-    are left vulnerable.
+    are left vulnerable. It is worth pointing out that these
+    devices are sold as general consumer devices, thus do
+    not assume any technical knowledge of the end-user.
 
-    The over-proliferation of these IoT devices has given 
-    massive fodder to Botnets such as Mirai, which in 2016
+
+    The over-proliferation of these IoT devices has 
+    provided a large number of vulnerable machines 
+    for Botnets such as Mirai, which in 2016
     launched a 620 Gbps attack on KrebsOnSecurity.com
     \cite{Brian_Krebs_2016}.
 
 
-    To combat the attempts of automated infectious devices
-    and novice would-be attackers, many measures have been
-    generated, such as Intrusion-Detection-Systems(IDS)
-    \cite{4693640} and, Intrusion-Prevention-Systems(IPS) like 
-    firewalls. A system that sits somewhere in between the
-    two, are HoneyPot servers. Devices designed to pose as
-    vulnerable hosts and fool would-be attackers. 
-    HoneyPots can be designed to respond to 
-    different attacks, such as dictionary attacks on SSH servers,
-    Telnet, or even wordpress plugin vulnerabilities.
+    The problem of vulnerable devices is not new, 
+    even before the rise of IoT, 
+    there were still large numbers of vulnerable machines 
+    on the internet.
+
 
     
-    Observing a pattern of attack rate over the day can lead
-    to a number of interesting hypotheses, but I will leave any
-    conjecture until after the data has been collected and 
-    adequately analyzed.
-
-    
-    
+    This paper describes a study on attack rates on SSH 
+    honeypots.
+    Section \ref{sec:relatedWork} introduces parallel work 
+        and relevant literature.
+    Section \ref{sec:methods} discusses the way that the 
+        data is collected, processed, and analyzed.
+    Section \ref{sec:results} will detail the analysis of
+        the data, both of the time-series analysis of 
+        attack rates, and also of the attacker behavior.
+    The paper concludes, and presents potential future
+    work in section \ref{sec:conclusion}. 

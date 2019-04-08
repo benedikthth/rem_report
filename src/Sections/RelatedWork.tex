@@ -2,11 +2,6 @@
 \label{sec:relatedWork}
 
 
-There has not been a whole lot of work 
-put into attack pattern analysis of honeypot
-servers.
-
-
 An 2004 analysis by F. Rainal et al. \cite{1324605}
 on network traffic, found that from the first 
 seconds of being connected to the internet, the 
@@ -22,6 +17,25 @@ realize that he is in a honeypot, and exit so that
 his intentions are not revealed.
 
 
+In a 2013, I. Koniaris, G. Papadimitriou, and 
+P. Nicopolitidis published a paper outlining
+their analysis of four months of honeypot 
+activity \cite{6624967}.
+ While their project was in many ways
+similar to this one, their focus was on 
+username and password combinations rather than
+exploring the correlation of time of day and 
+rate of attacks. 
+
+
+A similar paper from 2011, describes a statistical 
+analysis on honeypot activity 
+\cite{Song:2011:SAH:1978672.1978676}. 
+The authors however do not attempt to discern a 
+pattern from the attacks. In addition, the 8 years
+since the paper's publication mean that the 
+nature of the internet has changed significantly. 
+
 
 The use of honeypots has led to anti-honeypot technology.
 Krawetz \cite{1264861} 
@@ -29,9 +43,11 @@ notes in his 2004 article that spammers are re-active,
 not proactive, changing their tools only when they 
 become ineffective. The same can be claimed with honeypot
 technology, as when a detection strategy is discovered
-it will be made ineffective. The two sides will be forever
-caught in a evolutionary arms race.
-
+it will be made ineffective. There indeed is certainly 
+evidence of an ongoing arms race, as shown by activity
+of attackers on the honeypot, when after logging in, the
+attackers check automatically if the attacker is inside a 
+busybox.
 
 
 To understand where the traffic to the server originates from

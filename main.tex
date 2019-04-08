@@ -21,7 +21,7 @@
 % to display URLs in blue roman font according to Springer's eBook style:
 % \renewcommand\UrlFont{\color{blue}\rmfamily}
 
-
+\usepackage{float}
 \usepackage{bera}% optional: just to have a nice mono-spaced font
 \usepackage{listings}
 \usepackage{xcolor}
@@ -65,11 +65,12 @@
 %%%%%%%%%%% Write Nothing Twice %%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\serverlocation}{Germany}
+\newcommand{\abbrv}[1]{\textit{(#1)}}
 
 \begin{document}
 %
 \title{
-    Regional differences in attack patterns
+    Analysis of attack patterns on honeypot server
     % \thanks{Supported by organization x.}
 }
 %
@@ -99,8 +100,9 @@
 \input{src/Sections/RelatedWork.tex}
 \input{src/Sections/Methods.tex}
 \input{src/Sections/Results.tex}
+\input{src/Sections/Discussion.tex}
 % \input{src/Sections/Results.tex}
-% \input{src/Sections/Conclusion.tex}
+\input{src/Sections/Conclusion.tex}
 
 
 % \noindent Displayed equations are centered and set on a separate
